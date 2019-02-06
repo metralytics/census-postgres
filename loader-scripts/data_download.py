@@ -54,5 +54,9 @@ def download_file(file_name, data_url, target_directory='.'):
 
 download_file(file_name, data_url, local_data_directory)
 
+for file_name in zipfile_list:
+    download_file(file_name, data_url, local_data_directory)
+
+
 
 
