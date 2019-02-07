@@ -19,24 +19,21 @@ As an analyst, you are going to be most interest in the "Summary Files" which ar
 [Link](https://www.census.gov/programs-surveys/acs/data/summary-file.html)
 
 
-### Some ACS Terminology
-
-#### Top points to know
+### Top points to know about ACS
 * There are several geographic hierchies available and that overlap
 * Data can be released in 1-year and 5-year summary frequencies
 * 1-year data is only guaranteed available at at state leve, but some counties have 1-year data
 * 5-year data is available down to the level of a "block group" which in size sits between a "block" and a "census tract" or "block numbering area"
-* [Topic areas](https://www.census.gov/programs-surveys/acs/guidance/subjects.html) comprise
-    * **Social:** Ancestry, Citizen Voting-Age Population, Citizenship Status, Disability Status, Educational Attainment, Fertility, Grandparents as caregivers, Language spoken at home, Marital history, Marital Status, Migration (residence 1-year ago), Place of birth, School enrollment, Undergraduate field of degree, Veteran status (and period of military service), Year of entry
-    * **Housing:** Bedrooms, computer and internet use, House Heating Fuel, Kitchen facilities, Occupancy/Vacancy status, Occupants per room,
-    Plubming facilities, Rent, Rooms, Selected monthly owner costs, Telephone service available, Units in structure, Value of home, Vehicles available,
-    Year householder moved into unit, year structure built
-    * **Economic:** Class of worker, Commuting and place of work, Employment status, Food stamps (SNAP), Health insurance coverage, Income and earnings, Industry and occupation, Poverty status, Work status last year
-    * **Demographic:** Age, Sex, Group Quarters Population, Hispanic or Latino origin, Race, Relationship to householder, Total population
+* [Topic areas](https://www.census.gov/programs-surveys/acs/guidance/subjects.html) comprise Social, Housing, Economic, and Demographic data subjects
+* You will need three types of files
+    * Census files can be downloaded in ZIP format which contain TXT files of data only (no header rows)
+    * Headers are described in Excel file "templates"
+    * Lookup values are described in Excel file or text lookup tables
+* For some reason the aggregated mega-files for 5-year series have file extensions of `tar.gz` but they seem to be actually plain `tar` files
 
-#### Deeper dive
+### Geographic hierarchies
 
-* What is a block group? [According to Wikipedia](https://en.wikipedia.org/wiki/Census_block_group) "A Census Block Group is a geographical unit used by the United States Census Bureau which is between the Census Tract and the Census Block. It is the smallest geographical unit for which the bureau publishes sample data." See also [the glossary page](https://www.census.gov/geo/reference/gtc/gtc_bg.html?cssp=SERP). Block groups contain between 600 and 3,000 people. A census tract itself has between 2,00 and 8,000 residents and by definition, the tract boundaries ["follow visible features"](https://www2.census.gov/geo/pdfs/reference/GARM/Ch10GARM.pdf) so they can be identified easily from the ground by workers in the field.
+* What is a block group? [According to Wikipedia](https://en.wikipedia.org/wiki/Census_block_group), "\[a] Census Block Group is a geographical unit used by the United States Census Bureau which is between the Census Tract and the Census Block. It is the smallest geographical unit for which the bureau publishes sample data." See also [the glossary page](https://www.census.gov/geo/reference/gtc/gtc_bg.html?cssp=SERP). Block groups contain between 600 and 3,000 people. A census tract itself has between 2,00 and 8,000 residents and by definition, the tract boundaries ["follow visible features"](https://www2.census.gov/geo/pdfs/reference/GARM/Ch10GARM.pdf) so they can be identified easily from the ground by workers in the field.
 
 Too, the boundaries will always follow at least state and county boundaries, with cities boundaries being sometimes followed. But for privacy reasons, not all data is published at all geographic levels at a yearly granularity. In fact, yearly estimates are only 100% published at the level of state or "higher."
 
@@ -71,3 +68,11 @@ of geographic regions and publishing availability of 1, 1-year supplment, and 5-
 
 * What is a sequence? 
 
+### Topic areas
+Topic areas have four main areas:
+* **Social:** Ancestry, Citizen Voting-Age Population, Citizenship Status, Disability Status, Educational Attainment, Fertility, Grandparents as caregivers, Language spoken at home, Marital history, Marital Status, Migration (residence 1-year ago), Place of birth, School enrollment, Undergraduate field of degree, Veteran status (and period of military service), Year of entry
+* **Housing:** Bedrooms, computer and internet use, House Heating Fuel, Kitchen facilities, Occupancy/Vacancy status, Occupants per room,
+Plubming facilities, Rent, Rooms, Selected monthly owner costs, Telephone service available, Units in structure, Value of home, Vehicles available,
+Year householder moved into unit, year structure built
+* **Economic:** Class of worker, Commuting and place of work, Employment status, Food stamps (SNAP), Health insurance coverage, Income and earnings, Industry and occupation, Poverty status, Work status last year
+* **Demographic:** Age, Sex, Group Quarters Population, Hispanic or Latino origin, Race, Relationship to householder, Total population
