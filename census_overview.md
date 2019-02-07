@@ -27,9 +27,12 @@ As an analyst, you are going to be most interest in the "Summary Files" which ar
 * 1-year data is only guaranteed available at at state leve, but some counties have 1-year data
 * 5-year data is available down to the level of a "block group" which in size sits between a "block" and a "census tract" or "block numbering area"
 * Topic areas comprise
-    * Social
-    * Housing
-    * 
+    * Social: Ancestry, Citizen Voting-Age Population, Citizenship Status, Disability Status, Educational Attainment, Fertility, Grandparents as caregivers, Language spoken at home, Marital history, Marital Status, Migration (residence 1-year ago), Place of birth, School enrollment, Undergraduate field of degree, Veteran status (and period of military service), Year of entry
+    * Housing: Bedrooms, computer and internet use, House Heating Fuel, Kitchen facilities, Occupancy/Vacancy status, Occupants per room,
+    Plubming facilities, Rent, Rooms, Selected monthly owner costs, Telephone service available, Units in structure, Value of home, Vehicles available,
+    Year householder moved into unit, year structure built
+    * Economic: Class of worker, Commuting and place of work, Employment status, Food stamps (SNAP), Health insurance coverage, Income and earnings, Industry and occupation, Poverty status, Work status last year
+    * Demographic: Age, Sex, Group Quarters Population, Hispanic or Latino origin, Race, Relationship to householder, Total population
 
 #### Deeper dive
 
