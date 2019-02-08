@@ -3,24 +3,27 @@
 
 import pathlib as pl 
 import configparser as cp
+import psycopg2 as psy
 
 
 meta_scripts_dir = pl.Path.cwd().joinpath('../meta-scripts').resolve()
 
 credentials_dir = pl.Path.home().joinpath('.metralytics')
 
-config_file_path = credentials_dir.joinpath('pgdb.ini')
+config_file_name = 'pgdb.ini'
+
+config_file_path = credentials_dir.joinpath(config_file_name)
 
 def make_config_file():
     if not credentials_dir.exists():
         credentials_dir.mkdir()
     
-    db_config = cp.SafeConfigParser()
+    db_config = cp.ConfigParser()
 
     db_config['DEFAULT'] = {'host':'localhost',
                             'port':'5432',
                             'user':'galen',
-                            'password':'',
+                            'password': '',
                             'dbname':'postgres',
                             }
 
@@ -48,6 +51,16 @@ def make_config_file():
 
     with open(config_file_path, 'w') as configfile:
         db_config.write(configfile)
+
+
+def get_connection_config(profile='DEFAULT'):
+
+
+    with open(config_file_path, 'r') as configfile:
+        db_config = cp.ConfigParser()
+        db_config.read(config_file_path)
+    
+    return db_config.items(profile)
 
 
 
