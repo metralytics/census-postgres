@@ -36,7 +36,7 @@ INSERT INTO acs2018_1yr.geoheader  SELECT
 	NULLIF(btrim(substring(all_fields  from  119  for  3)),  '')  AS  sldl,
 	NULLIF(btrim(substring(all_fields  from  122  for  6)),  '')  AS  blank2,
 	NULLIF(btrim(substring(all_fields  from  128  for  3)),  '')  AS  blank3,
-	NULLIF(btrim(substring(all_fields  from  131  for  5)),  '')  AS  blank4,
+	NULLIF(btrim(substring(all_fields  from  131  for  5)),  '')  AS  zcta5,
 	NULLIF(btrim(substring(all_fields  from  136  for  5)),  '')  AS  submcd,
 	NULLIF(btrim(substring(all_fields  from  141  for  5)),  '')  AS  sdelm,
 	NULLIF(btrim(substring(all_fields  from  146  for  5)),  '')  AS  sdsec,
@@ -46,10 +46,10 @@ INSERT INTO acs2018_1yr.geoheader  SELECT
 	NULLIF(btrim(substring(all_fields  from  158  for  6)),  '')  AS  blank5,
 	NULLIF(btrim(substring(all_fields  from  164  for  5)),  '')  AS  blank6,
 	NULLIF(btrim(substring(all_fields  from  169  for  5)),  '')  AS  puma5,
-	NULLIF(btrim(substring(all_fields  from  184  for  5)),  '')  AS  blank7,
-	NULLIF(btrim(substring(all_fields  from  189  for  40)),  '')  AS  geoid,
-	NULLIF(btrim(substring(all_fields  from  219  for  200)),  '')  AS  name,
-	NULLIF(btrim(substring(all_fields  from  419  for  6)),  '')  AS  bttr,
-	NULLIF(btrim(substring(all_fields  from  425  for  1)),  '')  AS  btbg,
-	NULLIF(btrim(substring(all_fields  from  426  for  50)),  '')  AS  blank8
+	NULLIF(btrim(substring(all_fields  from  174  for  5)),  '')  AS  blank7,
+	NULLIF(btrim(substring(all_fields  from  179  for  40)),  '')  AS  geoid,
+	NULLIF(btrim(substring(all_fields  from  219  for  1000)),  '')  AS  name,
+	NULLIF(btrim(substring(all_fields  from  1219  for  6)),  '')  AS  bttr,
+	NULLIF(btrim(substring(all_fields  from  1225  for  1)),  '')  AS  btbg,
+	NULLIF(btrim(substring(all_fields  from  1226  for  44)),  '')  AS  blank8
 FROM acs2018_1yr.tmp_geoheader;
