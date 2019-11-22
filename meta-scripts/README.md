@@ -11,7 +11,7 @@ The data manager has the choice of running the data import scripts directly, or 
 
 # Using Functions to Create the Data Store and Import Data
 
-The data scripts which appear in the other folders of this repository (e.g. acs2010_5yr, acs2011_5yr) were created programmatically using several helper functions that build the SQL based on the Census product's data dictionary. The meta-scripts (function-creating scripts) are:
+The data scripts whtich appear in the other folders of this repository (e.g. acs2010_5yr, acs2011_5yr) were created programmatically using several helper functions that build the SQL based on the Census product's data dictionary. The meta-scripts (function-creating scripts) are:
 
 * Support Functions and Tables.sql
 * Staging Tables and Data Import Functions.sql

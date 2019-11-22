@@ -68,6 +68,7 @@ of geographic regions and publishing availability of 1, 1-year supplment, and 5-
 
 * What is a sequence? 
 
+
 ### Topic areas
 Topic areas have four main areas:
 * **Social:** Ancestry, Citizen Voting-Age Population, Citizenship Status, Disability Status, Educational Attainment, Fertility, Grandparents as caregivers, Language spoken at home, Marital history, Marital Status, Migration (residence 1-year ago), Place of birth, School enrollment, Undergraduate field of degree, Veteran status (and period of military service), Year of entry

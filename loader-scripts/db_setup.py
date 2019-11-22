@@ -54,24 +54,40 @@ def make_config_file():
 
 
 def get_connection_config(profile='DEFAULT'):
-
+    '''Loads a connection configuration from a pgdb.ini file
+    located in the .limetree directory. If no profile is specified, 
+    it will load the DEFAULT profile.
+    
+    Returns:
+        Dict of items for a psycopg2 connection to a PostgreSQL database '''
 
     with open(config_file_path, 'r') as configfile:
         db_config = cp.ConfigParser()
         db_config.read(config_file_path)
     
-    return db_config.items(profile)
+    db_config_dict = dict(db_config.items(profile))
+    
+    return db_config_dict
 
+def get_psycopg_conn(profile='DEFAULT'):
+    '''returns a psycopg2 connection to the profile named and described in
+    the config file at ~/.limetree/pgdb.ini
+    
+    Returns:
+        psycopg2 Connection object'''
+    
+    config_info = get_connection_config(profile)
+    conn = psy.connect(**config_info)
+    
+    return conn
 
+def get_psycopg_dict_curs(profile='DEFAULT'):
+    '''Return a psycopg2.extras.DictCursor for the connection in the 
+    profile given
+    '''
+    
+    conn = get_psycopg_conn(profile)
+    rd_curs = conn.cursor(cursor_factory=psy_extras.DictCursor)
+    
+    return rd_curs
 
-
-# db_config = cp.SafeConfigParser()
-
-# # read host, port, user, password, dbname, schema for 'census'
-# db_config.read(config_file)
-# cfg_host = db_config.get('census', 'host')
-# cfg_port = db_config.get('census', 'port')
-# cfg_user = db_config.get('census', 'user')
-# cfg_password = db_config.get('census', 'password')
-# cfg_dbname = db_config.get('census', 'dbname')
-# cfg_schema = db_config.get('census', 'dbname')
